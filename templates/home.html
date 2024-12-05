@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Home Page</h2>
+    <p>Welcome back, {{ username }}!</p>
+    <div class="button-container">
+        <a href="{{ url_for('show_analysis_page') }}" class="btn btn-primary">View Analysis</a>
+        <a href="{{ url_for('import_data') }}" class="btn btn-import">Import</a>
+        <a href="{{ url_for('generate_map_with_ml_predictions') }}" class="btn btn-secondary">Generate Map</a>
+        <a href="{{ url_for('dash') }}" class="btn btn-dash">Dashboard</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+</div>
+{% endblock %}

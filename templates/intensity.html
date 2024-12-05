@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Intensity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="loggedin">
+    <nav class="navtop">
+        <div>
+            <h1>Hurricane Tracker</h1>
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+            <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h2>Hurricane Intensity Over Time</h2>
+        <img src="{{ image }}" alt="Hurricane Intensity Plot" style="width:100%; max-height:600px; border:1px solid #ccc;">
+    </div>
+</body>
+</html>

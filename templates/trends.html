@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block title %}Category Probabilities{% endblock %}
+
+{% block content %}
+<div class="container bg-white p-4 rounded shadow-sm">
+    <h2 class="text-center">Hurricane Category Probabilities</h2>
+    <div class="table-container">
+        {% if tables %}
+            {% for table in tables %}
+                <table class="table table-striped table-bordered w-100">
+                    {{ table|safe }}
+                </table>
+            {% endfor %}
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    </div>
+</div>
+<style>
+    /* Убираем отступы */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Стили для таблицы */
+    .container {
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    .table-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #ddd;
+        word-wrap: break-word;
+    }
+
+    table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block title %}Uploaded Data{% endblock %}
+{% block content %}
+<div class="container bg-white p-4 rounded shadow-sm">
+    <h2 class="text-center">Uploaded Data</h2>
+    <div class="table-container">
+        {% if tables %}
+            {% for table in tables %}
+                <table class="table table-striped table-bordered w-100">
+                    {{ table|safe }}
+                </table>
+            {% endfor %}
+        {% else %}
+            <p>No data available to display.</p>
+        {% endif %}
+    </div>
+</div>
+<div class="text-center mt-3">
+    <form action="{{ url_for('predict_uploaded_data') }}" method="post">
+        <button type="submit" class="btn btn-success btn-lg">Predict</button>
+    </form>
+</div>
+<style>
+    /* Убираем отступы на странице */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Центрирование контейнера */
+    .container {
+        width: auto;
+        margin: 0; /* Убираем отступы сверху */
+        padding: 0;
+    }
+
+    /* Ограничение ширины таблицы и прокрутка */
+    .table-container {
+        max-width: 100%; /* Таблица занимает всю ширину экрана */
+        overflow-x: auto; /* Горизонтальная прокрутка */
+        background-color: #ffffff; /* Белый фон */
+        padding: 10px; /* Отступы вокруг таблицы */
+        border-radius: 5px; /* Скругленные углы */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #ddd;
+        word-wrap: break-word;
+    }
+
+    table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        // Подключение DataTable для интерактивности
+        $('table').DataTable({
+            paging: true,
+            searching: true,
+            info: true,
+            ordering: true,
+        });
+    });
+</script>
+{% endblock %}

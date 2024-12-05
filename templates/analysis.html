@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}Analysis{% endblock %}
+
+{% block content %}
+    <h2>Hurricane Analysis</h2>
+
+    <p>Explore various insights and visualizations about hurricanes.</p>
+
+    <!-- Пример графика -->
+    <div class="chart">
+        <h3>Cyclone Category Distribution</h3>
+        <img src="{{ url_for('static', filename='images/cyclone_distribution.png') }}" alt="Cyclone Category Distribution">
+    </div>
+
+    <!-- Пример второго графика -->
+    <div class="chart">
+        <h3>Air Temperature vs Wind Speed</h3>
+        <img src="{{ url_for('static', filename='images/temp_vs_wind_speed.png') }}" alt="Air Temperature vs Wind Speed">
+    </div>
+
+    <!-- Пример третьего графика -->
+    <div class="chart">
+        <h3>Precipitation Distribution</h3>
+        <img src="{{ url_for('static', filename='images/precipitation_histogram.png') }}" alt="Precipitation Distribution">
+    </div>
+
+    <!-- Кнопка для возвращения на главную страницу -->
+    <form method="get" action="{{ url_for('home') }}">
+        <button type="submit" class="btn btn-primary">Back to Home</button>
+    </form>
+{% endblock %}

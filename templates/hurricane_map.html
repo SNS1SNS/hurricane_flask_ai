@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9c5dc396345d93d952687141bd3dac67 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9c5dc396345d93d952687141bd3dac67" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9c5dc396345d93d952687141bd3dac67 = L.map(
+                "map_9c5dc396345d93d952687141bd3dac67",
+                {
+                    center: [20.0, -80.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bdc71f56144ce4ee0c6ac533ce60ecdb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_bdc71f56144ce4ee0c6ac533ce60ecdb.addTo(map_9c5dc396345d93d952687141bd3dac67);
+        
+    
+            var marker_a6f8515b67ff679901193127c7e26b5c = L.marker(
+                [20.43828835764774, -86.73183027926206],
+                {}
+            ).addTo(map_9c5dc396345d93d952687141bd3dac67);
+        
+    
+            var icon_b82ecbe05b07dd335be96571788f2a45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a6f8515b67ff679901193127c7e26b5c.setIcon(icon_b82ecbe05b07dd335be96571788f2a45);
+        
+    
+        var popup_40a6e4e8ee8e990900a4cc0673a9dc0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28f8b184beeea74bfc2fa5da10748563 = $(`<div id="html_28f8b184beeea74bfc2fa5da10748563" style="width: 100.0%; height: 100.0%;">Predicted Category: Tropical Depression (2024-12-19 21:00:00)</div>`)[0];
+                popup_40a6e4e8ee8e990900a4cc0673a9dc0b.setContent(html_28f8b184beeea74bfc2fa5da10748563);
+            
+        
+
+        marker_a6f8515b67ff679901193127c7e26b5c.bindPopup(popup_40a6e4e8ee8e990900a4cc0673a9dc0b)
+        ;
+
+        
+    
+    
+            var marker_dfbfbb2954dcc4bbd137c62fe4e38ce2 = L.marker(
+                [12.936478851117151, -90.5479602088966],
+                {}
+            ).addTo(map_9c5dc396345d93d952687141bd3dac67);
+        
+    
+            var icon_0a1759d32e8b0b9223ffb16eb397df68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dfbfbb2954dcc4bbd137c62fe4e38ce2.setIcon(icon_0a1759d32e8b0b9223ffb16eb397df68);
+        
+    
+        var popup_e277a45410f7036e8b9cf551421538e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ea6e93e7eb3c581197c281c0a63a7f6 = $(`<div id="html_3ea6e93e7eb3c581197c281c0a63a7f6" style="width: 100.0%; height: 100.0%;">Predicted Category: Hurricane Category 4 (2025-01-16 02:00:00)</div>`)[0];
+                popup_e277a45410f7036e8b9cf551421538e4.setContent(html_3ea6e93e7eb3c581197c281c0a63a7f6);
+            
+        
+
+        marker_dfbfbb2954dcc4bbd137c62fe4e38ce2.bindPopup(popup_e277a45410f7036e8b9cf551421538e4)
+        ;
+
+        
+    
+    
+            var marker_7838d5b32d02c5a9c783661516ba7ab8 = L.marker(
+                [15.990395208271837, -73.36952450110832],
+                {}
+            ).addTo(map_9c5dc396345d93d952687141bd3dac67);
+        
+    
+            var icon_4356586e7c58210eb1daac79720c063b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7838d5b32d02c5a9c783661516ba7ab8.setIcon(icon_4356586e7c58210eb1daac79720c063b);
+        
+    
+        var popup_7ab2432456dd64e0f5b16c79b62052c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e607dbe3207c1ae4a91b4e0147ce66a = $(`<div id="html_7e607dbe3207c1ae4a91b4e0147ce66a" style="width: 100.0%; height: 100.0%;">Predicted Category: Tropical Depression (2025-01-17 12:00:00)</div>`)[0];
+                popup_7ab2432456dd64e0f5b16c79b62052c6.setContent(html_7e607dbe3207c1ae4a91b4e0147ce66a);
+            
+        
+
+        marker_7838d5b32d02c5a9c783661516ba7ab8.bindPopup(popup_7ab2432456dd64e0f5b16c79b62052c6)
+        ;
+
+        
+    
+    
+            var marker_0d823babeba035204490e0d31199df2f = L.marker(
+                [20.250779801094, -67.43693388002109],
+                {}
+            ).addTo(map_9c5dc396345d93d952687141bd3dac67);
+        
+    
+            var icon_2bb01268b0a7ee8a804c56ccbef3525b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0d823babeba035204490e0d31199df2f.setIcon(icon_2bb01268b0a7ee8a804c56ccbef3525b);
+        
+    
+        var popup_879b9dc8c7b91a26a3ed582d5eab9cb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5593bc06477a35b20f7e5ada35dff9b = $(`<div id="html_e5593bc06477a35b20f7e5ada35dff9b" style="width: 100.0%; height: 100.0%;">Predicted Category: Hurricane Category 2 (2024-12-18 22:00:00)</div>`)[0];
+                popup_879b9dc8c7b91a26a3ed582d5eab9cb2.setContent(html_e5593bc06477a35b20f7e5ada35dff9b);
+            
+        
+
+        marker_0d823babeba035204490e0d31199df2f.bindPopup(popup_879b9dc8c7b91a26a3ed582d5eab9cb2)
+        ;
+
+        
+    
+</script>
+</html>
